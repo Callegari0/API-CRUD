@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="container-global">
+            <div class="div-form-flex">
+                <span>
+                    <h2>Criar Novo</h2>
+                    <form class="form-style-flex">
+                        <label for="">Id preenchido automaticamente</label>
+
+                        <label for="emailInput">Email:</label>
+                        <input type="email" id="emailInput" class="clean">
+
+                        <label for="firstNameInput">Primeiro nome:</label>
+                        <input type="text" id="firstNameInput" class="clean">
+
+                        <label for="lastNameInput">Último nome:</label>
+                        <input type="text" id="lastNameInput" class="clean">
+
+                        <label for="avatarInput">Insira uma imagem hospedada</label>
+                        <input type="text" id="avatarInput" class="clean">
+
+                        <input type="submit" id="send" value="enviar">
+                    </form>
+                    <p id="field-fill-Criar" class="filled">Preencha os campos!</p>
+                </span>
+
+                <span>
+                    <h2>Atualizar existente</h2>
+                    <form class="form-style-flex">
+                        <label for="idInputAtt">Id:</label>
+                        <input type="number" id="idInputAtt" class="clean">
+
+                        <label for="emailInputAtt">Email:</label>
+                        <input type="email" id="emailInputAtt" class="clean">
+
+                        <label for="firstNameInputAtt">Primeiro nome:</label>
+                        <input type="text" id="firstNameInputAtt" class="clean">
+
+                        <label for="lastNameInputAtt">Último nome:</label>
+                        <input type="text" id="lastNameInputAtt" class="clean">
+
+                        <label for="avatarInputAtt">Insira uma imagem hospedada</label>
+                        <input type="text" id="avatarInputAtt" class="clean">
+
+                        <input type="submit" id="modify" value="modificar">
+                    </form>
+                    <p id="field-fill-Atualizar" class="filled">Preencha os campos!</p>
+                </span>
+
+                <span>
+                    <h2>Deletar</h2>
+                    <form class="form-style-flex">
+                        <label for="deleteInput">Id</label>
+                        <input type="number" id="deleteInput" class="clean">
+
+                        <input type="submit" id="delete" value="deletar">
+                    </form>
+                    <p id="field-fill-Deletar" class="filled">Preencha o campo!</p>
+                </span>
+            </div>
+
+            <div class="container-flex">
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
