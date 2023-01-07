@@ -5,28 +5,33 @@ function getUsers() {
         .then(response => response.data)
         .then(data => {
 
-            const markup = data.data.map(element => {
-                return `
-            <div class="container-card">
-                <div class="container-card-style">
-                    <span>
-                        <img src="${element.avatar}" alt="user-image" class="avatar">
-                    </span>
+            let increment = 0;
 
-                    <span>
-                        <p class="ident">${element.id}</p>
-                        <p class="email">${element.email}</p>
-                        <p class="firstName">${element.first_name}</p>
-                        <p class="lastName">${element.last_name}</p>
-                    </span>
+            while (increment < data.data.length) {
+
+                let markup = `
+                <div class="container-card" data-aos="fade-up">
+                    <div class="container-card-style">
+                        <span>
+                            <img src="${data.data[increment].avatar}" alt="user-image" class="avatar">
+                        </span>
+
+                        <span>
+                            <p class="ident">${data.data[increment].id}</p>
+                            <p class="email">${data.data[increment].email}</p>
+                            <p class="firstName">${data.data[increment].first_name}</p>
+                            <p class="lastName">${data.data[increment].last_name}</p>
+                        </span>
+                    </div>
                 </div>
-            </div>
-            `;
-            });
-            document.querySelector(".container-flex").innerHTML = markup;
+                `;
+
+                increment++;
+
+                document.querySelector(".container-flex").insertAdjacentHTML('beforeend', markup);
+            };
         });
 };
-
 
 function addNewUser() {
 

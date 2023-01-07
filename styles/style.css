@@ -1,12 +1,33 @@
-main {
+body {
     background-color: rgb(14, 14, 14);
+}
+
+header span {
+    text-align: center;
+    color: rgb(0, 126, 63);
+    font-family: 'Oswald', sans-serif;
+}
+
+header h2 {
+    font-size: 22px;
+    padding: 1em;
+}
+
+main {
     color: #fff;
+    font-family: 'Oswald', sans-serif;
 }
 
 .container-global {
-    width: 90vw;
+    width: 100vw;
     margin: 0 auto;
     height: 100vh;
+}
+
+.container-global span h2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 2em 0 1em 0;
 }
 
 .div-form-flex {
@@ -15,11 +36,31 @@ main {
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 1em;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .form-style-flex {
     display: flex;
     flex-direction: column;
+}
+
+.form-style-flex label {
+    padding: .6em 0 .3em 0;
+}
+
+.form-style-flex input {
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .filled {
@@ -35,6 +76,8 @@ main {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin: 0 auto;
+    width: 95vw;
 }
 
 .container-card-style {
@@ -54,4 +97,16 @@ main {
     border-radius: 100%;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .6));
     margin-bottom: .5em;
+}
+
+@media screen and (min-width: 0px) and (max-width: 720px) {
+    .div-form-flex {
+        flex-direction: column;
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    .container-card-style {
+        min-width: 42vw;
+    }
 }

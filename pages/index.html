@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -15,11 +20,26 @@
 </head>
 
 <body>
+
+    <header>
+        <span>
+            <h2>Bem vindo.</h2>
+
+            <p>Esta é uma interface integrada à uma API externa.</p>
+            <p>Os campos abaixo servem para criar, modificar e deletar os cards.</p>
+            <p>As informações dos cards são preenchidas com as respostas do servidor.</p>
+            <p>As operações realizadas por essa interface são um 'CRUD' básico.</p>
+        </span>
+    </header>
+
     <main>
         <div class="container-global">
+
             <div class="div-form-flex">
                 <span>
+
                     <h2>Criar Novo</h2>
+
                     <form class="form-style-flex">
                         <label for="">Id preenchido automaticamente</label>
 
@@ -37,11 +57,15 @@
 
                         <input type="submit" id="send" value="enviar">
                     </form>
+
                     <p id="field-fill-Criar" class="filled">Preencha os campos!</p>
+
                 </span>
 
                 <span>
+
                     <h2>Atualizar existente</h2>
+
                     <form class="form-style-flex">
                         <label for="idInputAtt">Id:</label>
                         <input type="number" id="idInputAtt" class="clean">
@@ -60,18 +84,24 @@
 
                         <input type="submit" id="modify" value="modificar">
                     </form>
+
                     <p id="field-fill-Atualizar" class="filled">Preencha os campos!</p>
+
                 </span>
 
                 <span>
+
                     <h2>Deletar</h2>
+
                     <form class="form-style-flex">
                         <label for="deleteInput">Id</label>
                         <input type="number" id="deleteInput" class="clean">
 
                         <input type="submit" id="delete" value="deletar">
                     </form>
+
                     <p id="field-fill-Deletar" class="filled">Preencha o campo!</p>
+
                 </span>
             </div>
 
@@ -79,7 +109,14 @@
             </div>
         </div>
     </main>
+
     <script src="../scripts/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
