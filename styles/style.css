@@ -2,24 +2,32 @@ body {
     background-color: rgb(14, 14, 14);
 }
 
-header span {
-    text-align: center;
-    color: rgb(0, 126, 63);
-    font-family: 'Oswald', sans-serif;
-}
-
-header h2 {
-    font-size: 22px;
-    padding: 1em;
-}
-
+header,
 main {
     color: #fff;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.main-inicial-phrase {
+    animation: fadeIn 3.5s ease-in;
+}
+
+.nav-list-flex {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em 0 1em 0;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.li-a-text-decoration {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
 }
 
 .container-global {
-    width: 100vw;
     margin: 0 auto;
     height: 100vh;
 }
@@ -35,7 +43,7 @@ main {
     text-align: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 1em;
+    padding: 1em 0 1em 0;
     animation: fadeIn 1.5s ease-out;
 }
 
