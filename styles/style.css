@@ -59,6 +59,7 @@ main {
 
 .form-style-flex {
     display: flex;
+    width: 20vw;
     flex-direction: column;
 }
 
@@ -112,6 +113,11 @@ main {
         flex-direction: column;
         width: 70vw;
         margin: 0 auto;
+    }
+
+    .form-style-flex {
+        margin: 0 auto;
+        width: 50vw;
     }
 
     .container-card-style {
